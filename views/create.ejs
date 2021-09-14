@@ -1,0 +1,51 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public\css\style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <center>
+    <form action = "http://localhost:3000/create" method = "POST" style="border:1px solid #ccc" name="signupForm">
+
+            <h1><b>
+            <center style="color: #3e2452">Add book Console</center>
+            </b></h1>
+            <hr>
+                <table>
+                    <tr>
+                        <td style="color: #630d5e; font-size:x-large; height:80px;width:100px"><label><b>Book Id</b></label></td>
+                        <td style="height:80px;width:100px;"><input type="text" name="bookId" id="bookId" required></td>
+                    </tr><br/><br/>
+
+                    <tr>
+                        <td style="color: #630d5e; font-size:x-large; height:80px;width:100px"><label><b>Title</b></label></td>
+                        <td style="height:80px;width:100px;"><input type="text" name="title" id="title" required></td>
+                    </tr><br/><br/>
+
+                    <tr>
+                        <td style="color: #630d5e; font-size:x-large; height:80px;width:100px"><label><b>Author</b></label></td>
+                        <td style="height:80px;width:100px;"><input type="text" name="author" id="author" required></td>
+                    </tr><br/><br/>
+
+                </table>
+                <br/>
+            
+                <table>               
+                    <tr>
+                        <td></td>
+                        <td style="color: #630d5e; font-size:x-large"><center><button type="submit" class="Login" class="btn btn-primary"><b>ADD BOOK</b></button></center></td>
+                    </tr>
+                </table>
+    </form>
+    </center>
+    <% if(typeof flag != 'undefined' && flag == 1){ %>
+        <p><center  style="color: #aa3507"><b>Book already exist with the bookId you entered!</b></center></p> 
+        <%} %>
+</body>
+</html>

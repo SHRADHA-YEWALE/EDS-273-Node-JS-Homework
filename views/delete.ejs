@@ -1,0 +1,43 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./public/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <form action = "http://localhost:3000/delete" method = "POST" style="border:1px solid #ccc" name="signupForm">
+
+        <h1><b>
+                <center style="color: #3e2452">Delete book Console</center>
+            </b></h1>
+        <hr>
+        <center>
+            <table class="fieldTable" cellspacing="80">
+                <tr>
+                    <td style="color: #630d5e; font-size:x-large; height:80px;width:100px"><b>Book Id</b></label></td>
+                    <td><input type="text" name="bookId" id="bookId" required></td>
+                </tr><br />
+            </table>
+        
+            <table>
+                <tr>
+                    <td style="color: #630d5e;height:50px;width:700px; padding-left: 100;">
+                        <center><button type="submit" class="Login" class="btn btn-primary" style="color: #630d5e;"><b>DELETE BOOK</b></button></center>
+                    </td>
+                </tr>
+            </table>
+            
+        </center>
+
+    </form>
+    <% if(typeof flag != 'undefined' && flag == 1){ %>
+        <p><center  style="color: #8f270d"><b>Unable to delete the book as book ID is not present.</b></center></p> 
+        <%} %>
+</body>
+
+</html>
